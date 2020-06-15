@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Studenci</h1>
-
+dodano <%=@students.size %>
+średnia <%=average @students %>
 <table>
   <thead>
     <tr>
@@ -15,7 +16,10 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
+        <td>
+        <%= student.name %>
+        <%= student.name.length %>
+        </td>
         <td><%= student.birthdate %></td>
         <td><%= student.info %></td>
         <td><%= link_to 'Show', student %></td>
@@ -29,4 +33,4 @@
 <br>
 
 <%= link_to ' Dodaj ucznia', new_student_path %>
-<%= link_to ' Idź do Gugla', "http://google.com" %>
+<%= link_to ' Otwórz kalkulator', "https://www.google.com/search?q=kalkulator&oq=kalkulator&aqs=chrome.0.69i59j0l7.2557j0j7&sourceid=chrome&ie=UTF-8" %>
