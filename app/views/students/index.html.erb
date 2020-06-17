@@ -18,12 +18,13 @@ dodano <%=@students.size %>
       <tr>
         <td>
         <%= student.name %>
-        <%= student.name.length %>
+        <%= student.marks.length %>
         </td>
         <td><%= student.birthdate %></td>
         <td><%= student.info %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        
         
       </tr>
     <% end %>
