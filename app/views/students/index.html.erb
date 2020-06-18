@@ -2,7 +2,7 @@
 
 <h1>Studenci</h1>
 dodano <%=@students.size %>
-średnia <%=average @students %>
+średnia <%=show_mark Mark.all %>
 <table>
   <thead>
     <tr>
@@ -24,8 +24,8 @@ dodano <%=@students.size %>
         <td><%= student.info %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        
-        
+        <td><%= show_mark student.marks %></td>
+        <td><%= %></td>
       </tr>
     <% end %>
   </tbody>
